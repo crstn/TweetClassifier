@@ -1,2 +1,3 @@
 src/twitter4j.properties
-build/classes/twitter4j.properties
+
+twitter4j.properties

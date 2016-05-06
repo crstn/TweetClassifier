@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-7-oracle">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 7 [1.7.0_51]">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
@@ -13,10 +13,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mallet.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/trove-2.0.2.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/twitter4j-core-4.0.2.jar"/>
-	<classpathentry kind="lib" path="/home/grantdmckenzie/workspace/Libraries/jetty-all-7.2.2.v20101205.jar"/>
-	<classpathentry kind="lib" path="/home/grantdmckenzie/workspace/Libraries/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/carsten/Dropbox/Code/Workspace/twitter4j-core-4.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/carsten/Dropbox/Code/Workspace/jetty-all-7.2.2.v20101205.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/carsten/Dropbox/Code/Workspace/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/carsten/Dropbox/Code/Workspace/mallet.jar"/>
+	<classpathentry kind="lib" path="/Users/carsten/Dropbox/Code/Workspace/trove-2.0.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

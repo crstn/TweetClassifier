@@ -1,0 +1,92 @@
+{"user":"lsava7",
+"tweets":[
+{"727645370113773568": {
+"datetime":"Tue May 03 19:45:49 EDT 2016",
+"text":"Heading to church",
+"classification":
+{"workschool":0.2880527236542879, 
+"shopping":0.2179910497751363, 
+"otherfam":0.11535085507283221, 
+"recreation":0.10598589108697819, 
+"dropoff":0.08721876472771882, 
+"eat":0.028831410985346546, 
+"none":0.019770204892544642, 
+"social":0.01927561313217704, 
+"workother":0.0035081577003148985
+}}
+},{"727641862832574464": {
+"datetime":"Tue May 03 19:31:53 EDT 2016",
+"text":"Back to Hunter to finish up some research",
+"classification":
+{"workschool":0.22206621793507297, 
+"otherfam":0.1956508476611185, 
+"dropoff":0.158823407304482, 
+"shopping":0.13031707657156333, 
+"recreation":0.09070338160820848, 
+"eat":0.030204501696854208, 
+"none":0.021100731982968513, 
+"social":0.020648129275511583, 
+"workother":0.003875700332163411
+}}
+},{"727633376891555843": {
+"datetime":"Tue May 03 18:58:10 EDT 2016",
+"text":"Headed to this Japanese bookstore by Bryant Park",
+"classification":
+{"recreation":0.3200605836121392, 
+"shopping":0.30656232687689045, 
+"workschool":0.130599032532667, 
+"dropoff":0.12454052987967464, 
+"otherfam":0.03835464282731652, 
+"eat":0.011842349657145342, 
+"none":0.008273013363105675, 
+"social":0.00809556036052779, 
+"workother":0.0015195548981552529
+}}
+},{"727626863439425536": {
+"datetime":"Tue May 03 18:32:17 EDT 2016",
+"text":"Headed to this sweet skate shop",
+"classification":
+{"shopping":0.33417132547241024, 
+"otherfam":0.26524218430407925, 
+"workschool":0.11039324844848543, 
+"recreation":0.08123600886927253, 
+"dropoff":0.0668513919383227, 
+"eat":0.02209868440505114, 
+"none":0.015153456026331577, 
+"social":0.014774361599518495, 
+"workother":0.0026889308297055265
+}}
+},{"727613311697731586": {
+"datetime":"Tue May 03 17:38:26 EDT 2016",
+"text":"Got what I needed, headed downtown to get some art supplies",
+"classification":
+{"workschool":0.34178526050872543, 
+"shopping":0.32162159897181947, 
+"recreation":0.1146919349774329, 
+"otherfam":0.06073543370220771, 
+"dropoff":0.056827982184104196, 
+"eat":0.014308094351424178, 
+"none":0.010374538494281329, 
+"social":0.01022643571325306, 
+"workother":0.0020416952498475706
+}}
+},{"727606056742957057": {
+"datetime":"Tue May 03 17:09:36 EDT 2016",
+"text":"Going to walgreens",
+"classification":
+{"workschool":0.2880527236542879, 
+"shopping":0.2179910497751363, 
+"otherfam":0.11535085507283221, 
+"recreation":0.10598589108697819, 
+"dropoff":0.08721876472771882, 
+"eat":0.028831410985346546, 
+"none":0.019770204892544642, 
+"social":0.01927561313217704, 
+"workother":0.0035081577003148985
+}}
+},{"727599029341835264": {
+"datetime":"Tue May 03 16:41:41 EDT 2016",
+"text":"Test walk",
+"classification":
+{}}
+}]}
