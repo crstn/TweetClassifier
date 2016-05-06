@@ -1,10 +1,14 @@
 package com.carsi;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -22,15 +26,82 @@ public class UserClassifier {
 
 	public static void main(String[] args) throws Exception {
 
-		String user = "lsava7";
-		int pagenum = 1;
-		int countnum = 20;
-		Classifier classifier = loadClassifier();
+		int limit = 50;
+		
+		if(args.length == 1)
+			classifyAllUserTweets(args[0], loadClassifier(), limit);
+		else
+			System.out.println("Run with exactly one argument, the full path to list_of_files.txt");
+		
+		
+		
+		
+		
 
-		PrintWriter out = new PrintWriter("classification.json");
-		out.println(classifyUserTimeline(user, classifier, pagenum, countnum));
-		out.close();
+	}
+	
+	public static void classifyAllUserTweets(String file, Classifier classifier, int limit){
+		try {
+			ArrayList<String> userNames = getUsernames(file);
+			
+			for (String u : userNames) {
+				
+				System.out.println("Classifying user " + u);
+				
+				PrintWriter out = new PrintWriter("tweets-" + u + ".json");
+				out.println(classifyUserTimeline(u, classifier, limit));
+				out.close();
+				
+			}
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	/**
+	 * Generates a list of all unique users from our list_of_files.txt, which lists all json files exported from the geodatabase  
+	 * @param file
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	public static ArrayList<String> getUsernames(String file) throws FileNotFoundException, IOException{
+		
+		ArrayList<String> users = new ArrayList<String>();
+		
+		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+		    StringBuilder sb = new StringBuilder();
+		    String line = br.readLine();
 
+		    while (line != null) {
+		        sb.append(line);
+		        sb.append(System.lineSeparator());
+		        line = br.readLine();
+		    }
+		    String everything = sb.toString();
+		    String[] names = everything.split("'");
+		    
+		    for (int i = 0; i < names.length; i++) {
+		    	if(names[i].endsWith(".json")){
+		    		String[] parts = names[i].split("_");
+		    		if(parts.length > 3){
+		    			if(!users.contains(parts[3])){
+		    				users.add(parts[3]);
+		    			}
+		    		}
+		    		
+		    	}
+			}
+		}
+		
+		return users;
+			
 	}
 
 	public static Classifier loadClassifier() throws IOException,
@@ -115,14 +186,14 @@ public class UserClassifier {
 	}
 
 	public static String classifyUserTimeline(String user,
-			Classifier classifier, int pagenum, int countnum)
+			Classifier classifier, int limit)
 			throws IOException {
 		// gets Twitter instance with default credentials
 		Twitter twitter = new TwitterFactory().getInstance();
 		String responseObject = "{\"user\":\"" + user + "\",\n\"tweets\":[\n";
 		try {
 			List<Status> statuses;
-			Paging page = new Paging(pagenum, countnum);
+			Paging page = new Paging(1, limit);
 			statuses = twitter.getUserTimeline(user, page);
 
 			for (Status status : statuses) {
